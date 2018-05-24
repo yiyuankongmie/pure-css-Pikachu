@@ -22,13 +22,14 @@
     let container = document.querySelector('#code')
     let styleTag = document.querySelector('#styleTag')
     let n = 0
-    setTimeout(function run() {
+    let id
+    id = setTimeout(function run() {
       n += 1
       container.innerHTML = code.substring(0, n)
       styleTag.innerHTML = code.substring(0, n)
       container.scrollTop = container.scrollHeight
       if (n < code.length) {
-        setTimeout(run, duration)
+        id = setTimeout(run, duration)
       } else {
         fn && fn.call()
       }
