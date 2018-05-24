@@ -20,3 +20,26 @@ body{
     overflow: auto;
     font-size: 16px;
 }
+.actions{
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+.actions > button{
+  margin: 10px;
+  background: #ddd;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 2px;
+  transition: all .3s;
+}
+.actions > button:focus{
+  outline: none;
+}
+.actions > button.active{
+  background: #FEE433;
+  color: #fff;
+}
